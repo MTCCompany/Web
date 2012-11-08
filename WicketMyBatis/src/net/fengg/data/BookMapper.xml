@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.fengg.data.BookMapper">
+	<select id="selectBookAll" resultType="Book">
+	<![CDATA[
+        select * from book
+	]]>
+	</select>
+	<select id="selectBook" parameterType="int" resultType="Book">
+	<![CDATA[
+        select * from book where id = #{id}
+	]]>
+	</select>
+	<select id="selectMaxId" resultType="Book">
+	<![CDATA[
+        select
+            max(id) as id,
+            subject,
+            type,
+            price,
+            comment
+        from
+            book
+	]]>
+	</select>
+	<insert id="insertBook" parameterType="Book">
+	<![CDATA[
+        insert into book 
+        (
+            id,
+            subject,
+            type,
+            price,
+            comment
+        ) 
+        values
+        (
+            #{id},
+            #{subject},
+            #{type},
+            #{price},
+            #{comment}
+        )
+	]]>
+	</insert>
+	<update id="updateBook" parameterType="Book">
+	<![CDATA[
+        update book
+        set
+            subject = #{subject},
+            type = #{type},
+            price = #{price},
+            comment = #{comment}
+        where
+            id = #{id}
+	]]>
+	</update>
+	<delete id="deleteBook" parameterType="int">
+	<![CDATA[
+        delete from book
+        where id=#{id}
+	]]>
+	</delete>
+</mapper>

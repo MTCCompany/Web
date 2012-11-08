@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Wicketサンプル一覧表示画面</title>
+</head>
+<body>
+<strong>Book登録情報一覧</strong>
+<br><br>
+<form wicket:id="frm1">
+<table border="1" cellspacing="1" width="700">
+<tr bgcolor="#ccffcc">
+	<td width="5%">ID</td>
+	<td width="20">SUBJECT</td>
+	<td width="10%">PRICE</td>
+	<td width="10%">TYPE</td>
+	<td width="45%">COMMENT</td>
+	<td width="5%">　</td>
+	<td width="5%">　</td>
+</tr>
+<tr wicket:id="bookTable">
+	<td wicket:id="id">id</td>
+	<td wicket:id="subject">subject</td>
+	<td wicket:id="price">price</td>
+	<td wicket:id="type">type</td>
+	<td wicket:id="comment">comment</td>
+	
+	<td>
+		<input wicket:id="updateBtn" type="submit" value="更新">
+	</td>
+	<td>
+		<input wicket:id="deleteBtn" type="submit" value="削除">
+	</td>
+	
+</tr>
+</table>
+</form>
+<form wicket:id="frmHome">
+	<input wicket:id="home" type="submit"　value="Homeへ">
+</form>
+<br>
+</body>
+</html>

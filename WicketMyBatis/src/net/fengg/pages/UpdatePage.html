@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Result Page</title>
+</head>
+<body>
+<span>更新情報を入力して下さい。</span>
+<br><br>
+<form wicket:id="frm1" action="post">
+	Subject : <input wicket:id="subject" type="text" size="35">
+    <br><br>
+    Price : <input wicket:id="price" type="text" size="20">
+    Type : 
+    <select wicket:id="type">
+    	<option>Example1</option>
+    	<option>Example2</option>
+    	<option>Example3</option>
+    </select>
+    <br><br>
+    Comment : <br>
+    <textarea wicket:id="comment" rows="5" cols="40">
+    	article will be here
+    </textarea>
+    <br><br>
+    <input wicket:id="lButton" type="submit" value="更新">　　
+</form>
+<form wicket:id="frmHome">
+	<input wicket:id="home" type="submit"　value="Homeへ">
+</form>
+</body>
+</html>
