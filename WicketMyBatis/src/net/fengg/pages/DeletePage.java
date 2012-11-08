@@ -92,7 +92,7 @@ public class DeletePage extends WebPage {
 			@Override
 			public void onSubmit()
 			{
-				setResponsePage(new ResultPage());
+				setResponsePage(new MainPage());
 			}
 		};
 		return button;
